@@ -8,6 +8,7 @@ public class MeshFader : MonoBehaviour {
 	public Renderer[] fadeRenderers;
 	public float speed = 1f;
 
+	//測試
 	[ContextMenu("Test FadeIn")]
 	private void Test()
 	{

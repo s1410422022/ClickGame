@@ -26,7 +26,7 @@ public class MeshFader : MonoBehaviour {
 	public IEnumerator FadeIn()
 	{
 		StopCoroutine (FadeOut());
-		float alpha = 0;
+		float alpha = 0;//初始透明
 		for (int i = 0; i < fadeRenderers.Length; i++)
 		{
 			Color color = fadeRenderers [i].material.color;

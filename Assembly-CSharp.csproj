@@ -51,7 +51,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\GameFacade.cs" />
+     <Compile Include="Assets\Scripts\Model\EnemyData.cs" />
+     <Compile Include="Assets\Scripts\Model\StageData.cs" />
      <Compile Include="Assets\Scripts\View\Behavior\EnemyBehavior.cs" />
+     <Compile Include="Assets\Scripts\View\Component\BarTextDisplay.cs" />
      <Compile Include="Assets\Scripts\View\Component\HealthComponent.cs" />
      <Compile Include="Assets\Scripts\View\Component\MeshFader.cs" />
      <None Include="Assets\Models\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />

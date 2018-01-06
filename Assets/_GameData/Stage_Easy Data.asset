@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 429473e851aa2c54eaace9ba79168c61, type: 3}
+  m_Name: Stage_Easy Data
+  m_EditorClassIdentifier: 
+  enemys:
+  - health: 50
+    willDropItemId: 0
+    dropProbability: 0
+    defeatTimeLimit: 0
+    enemyPrefab: {fileID: 114148815098310364, guid: c7e6d0dea441efb409d0faf991a8281b,
+      type: 2}
+  - health: 100
+    willDropItemId: 0
+    dropProbability: 0
+    defeatTimeLimit: 0
+    enemyPrefab: {fileID: 114985760159836102, guid: 8abc13bf60610994c80db7f0e2d8e1ae,
+      type: 2}
+  - health: 200
+    willDropItemId: 0
+    dropProbability: 0
+    defeatTimeLimit: 0
+    enemyPrefab: {fileID: 114076167579738796, guid: b3778d39034050249bb97b2179f1a98c,
+      type: 2}
+  - health: 500
+    willDropItemId: 0
+    dropProbability: 0
+    defeatTimeLimit: 0
+    enemyPrefab: {fileID: 114739704255642574, guid: ed433ef770f73344b8d354baf69ae7e4,
+      type: 2}

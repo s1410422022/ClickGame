@@ -9,16 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 429473e851aa2c54eaace9ba79168c61, type: 3}
-  m_Name: Stage Data
+  m_Name: Stage_Nomal Data
   m_EditorClassIdentifier: 
   enemys:
-  - health: 10
+  - health: 50
     willDropItemId: 0
     dropProbability: 0
     defeatTimeLimit: 0
-    enemyPrefab: {fileID: 0}
-  - health: 20
+    enemyPrefab: {fileID: 114148815098310364, guid: c7e6d0dea441efb409d0faf991a8281b,
+      type: 2}
+  - health: 100
     willDropItemId: 0
     dropProbability: 0
     defeatTimeLimit: 0
-    enemyPrefab: {fileID: 0}
+    enemyPrefab: {fileID: 114148815098310364, guid: c7e6d0dea441efb409d0faf991a8281b,
+      type: 2}

@@ -13,14 +13,17 @@ public class EnemyBehavior : MonoBehaviour {
 	private AudioSource audioSource;
 	private HealthComponent healthComponent; //腳本
 
+
 	[SerializeField]
 	public AudioClip hurtClip;
 	[SerializeField]
 	public AudioClip deadClip;
 
-	public EnemyData enemyData;
+    private PlayerController playerController;
 
-	public bool IsDead
+    public Transform hitPoint;
+
+    public bool IsDead
 	{
 		get
 		{ 
@@ -29,13 +32,6 @@ public class EnemyBehavior : MonoBehaviour {
 	}
 
 
-	//測試
-	[ContextMenu("Test Execute")]
-	private void TestExecute()
-	{
-		StartCoroutine (Execute(enemyData));
-	}
-
 
 	private void Awake()
 	{
@@ -43,6 +39,7 @@ public class EnemyBehavior : MonoBehaviour {
 		meshFader= GetComponent<MeshFader>();
 		audioSource= GetComponent<AudioSource>();
 		healthComponent= GetComponent<HealthComponent>();
+        playerController = GameFacade.GetInstance().PlayerController;
 
 	}
 
@@ -93,16 +90,28 @@ public class EnemyBehavior : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () 
+	private void  Update () 
 	{
-		if (healthComponent.IsOver) 
+		if (IsDead) 
 		{
 			return;
 		}
 
-		if (Input.GetButtonDown ("Fire1")) //當滑鼠按下一次
+#if UNITY_EDITOR
+        if (Input.GetButtonDown ("Fire1")) //當滑鼠按下一次
 		{
-			DoDamage (10);
-		}
-	}
+            playerController.OnClickEnemy(this);
+
+        }
+#else
+        if (Input.touchCount > 0) {
+            for (int i=0;i<Input.touchCount;i++) {
+                if (Input.GetTouch(i).phase == TouchPhase.Began) {
+                    playerController.OnClickEnemy(this);
+                }
+            }
+        }
+
+#endif
+    }
 }
